@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Independence Day! 🇮🇳</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="tricolor-loader">
+            <div class="saffron"></div>
+            <div class="white"></div>
+            <div class="green"></div>
+        </div>
+        <p>Preparing Independence Day Surprise...</p>
+    </div>
+
+    <!-- Main Container -->
+    <div id="main-container" class="hidden">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="flag-animation">
+                <div class="flag">
+                    <div class="saffron-stripe"></div>
+                    <div class="white-stripe">
+                        <div class="ashoka-chakra"></div>
+                    </div>
+                    <div class="green-stripe"></div>
+                </div>
+            </div>
+            <h1 class="hero-title">Happy Independence Day</h1>
+            <p class="hero-subtitle">Celebrating 77 Years of Freedom</p>
+            <button id="start-surprise" class="cta-button">Start Surprise</button>
+        </section>
+
+        <!-- Interactive Section -->
+        <section id="interactive-section" class="hidden">
+            <div class="container">
+                <h2>Interactive Independence Day Experience</h2>
+                
+                <!-- Fireworks Canvas -->
+                <canvas id="fireworks-canvas"></canvas>
+                
+                <!-- Interactive Elements -->
+                <div class="interactive-grid">
+                    <div class="card" id="flag-card">
+                        <h3>Virtual Flag Hoisting</h3>
+                        <div class="flag-pole">
+                            <div class="flag-on-pole" id="hoisted-flag">
+                                <div class="saffron-small"></div>
+                                <div class="white-small">
+                                    <div class="chakra-small"></div>
+                                </div>
+                                <div class="green-small"></div>
+                            </div>
+                        </div>
+                        <button id="hoist-flag">Hoist Flag</button>
+                    </div>
+
+                    <div class="card" id="anthem-card">
+                        <h3>National Anthem</h3>
+                        <div class="play-button" id="play-anthem">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                        <p>Click to play Jana Gana Mana</p>
+                    </div>
+
+                    <div class="card" id="quiz-card">
+                        <h3>Independence Day Quiz</h3>
+                        <div id="quiz-container">
+                            <p id="question">When did India gain independence?</p>
+                            <div class="quiz-options">
+                                <button class="option" data-answer="1947">1947</button>
+                                <button class="option" data-answer="1950">1950</button>
+                                <button class="option" data-answer="1945">1945</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="message-card">
+                        <h3>Share Your Message</h3>
+                        <textarea id="message-input" placeholder="Write your Independence Day message..."></textarea>
+                        <button id="share-message">Share</button>
+                        <div id="messages-display"></div>
+                    </div>
+                </div>
+
+                <!-- Photo Gallery -->
+                <div class="gallery-section">
+                    <h3>Independence Day Gallery</h3>
+                    <div class="gallery">
+                        <img src="/india1.jpg" alt="Independence Day" class="gallery-img">
+                        <img src="/india2.webp" alt="Indian Flag" class="gallery-img">
+                        <img src="/lucky.jpg" alt="Celebration" class="gallery-img">
+                        <img src="/palvi.jpg" alt="Patriotic" class="gallery-img">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Surprise Modal -->
+        <div id="surprise-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>🎉 Special Independence Day Surprise! 🎉</h2>
+                <div id="surprise-content">
+                    <div class="surprise-animation">
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                        <div class="confetti"></div>
+                    </div>
+                    <p class="surprise-text">Wishing you a very Happy Independence Day!</p>
+                    <p class="surprise-subtext">May our country continue to prosper and shine!</p>
+                    <button id="close-surprise" class="cta-button">Thank You!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="national-anthem" preload="auto">
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
